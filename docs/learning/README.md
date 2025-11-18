@@ -183,6 +183,12 @@
 | [FIRST_CONTRIBUTIONS.md](./FIRST_CONTRIBUTIONS.md) | Contribution guide | 30 min | All foundation docs |
 | [FAQ.md](./FAQ.md) | Common questions | As needed | None |
 
+### 💡 Product & UX
+
+| Document | Purpose | Time | Prerequisites |
+|----------|---------|------|---------------|
+| [IMPROVEMENT_RECOMMENDATIONS.md](./IMPROVEMENT_RECOMMENDATIONS.md) | Feature & UX suggestions | 1-2 hours | Architecture Overview |
+
 ---
 
 ## 🎓 Key Concepts to Master
