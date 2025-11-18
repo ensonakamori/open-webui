@@ -260,14 +260,14 @@ class Example(Base):
 2. **Create migration:**
 
 ```bash
-cd backend
-alembic revision -m "add example table"
+# From project root
+alembic -c backend/open_webui/alembic.ini revision -m "add example table"
 ```
 
 3. **Edit migration:**
 
 ```python
-# backend/alembic/versions/xxxx_add_example_table.py
+# backend/open_webui/migrations/versions/xxxx_add_example_table.py
 def upgrade():
     op.create_table('example',
         sa.Column('id', sa.String(), nullable=False),
@@ -283,7 +283,8 @@ def downgrade():
 4. **Run migration:**
 
 ```bash
-alembic upgrade head
+# From project root
+alembic -c backend/open_webui/alembic.ini upgrade head
 ```
 
 ### How do I stream LLM responses?
@@ -356,8 +357,8 @@ export DATABASE_URL="postgresql://user:password@localhost/openwebui"
 
 4. **Run migrations:**
 ```bash
-cd backend
-alembic upgrade head
+# From project root
+alembic -c backend/open_webui/alembic.ini upgrade head
 ```
 
 ### How do I reset the database?
@@ -365,13 +366,13 @@ alembic upgrade head
 ⚠️ **WARNING: This deletes all data!**
 
 ```bash
-cd backend
+# From project root
 
 # Drop all tables
-alembic downgrade base
+alembic -c backend/open_webui/alembic.ini downgrade base
 
 # Recreate tables
-alembic upgrade head
+alembic -c backend/open_webui/alembic.ini upgrade head
 ```
 
 ---

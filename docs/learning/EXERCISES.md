@@ -158,7 +158,7 @@ curl http://localhost:8080/api/v1/chats/YOUR_CHAT_ID/stats \
 
 **Database Migration:**
 ```python
-# backend/alembic/versions/xxxx_add_favorite_column.py
+# backend/open_webui/migrations/versions/xxxx_add_favorite_column.py
 def upgrade():
     op.add_column('chat', sa.Column('is_favorite', sa.Boolean(), server_default='0'))
 

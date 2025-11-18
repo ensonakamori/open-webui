@@ -446,10 +446,9 @@ python backend/open_webui/main.py
 npm run lint:backend      # Lint Python code (pylint)
 npm run format:backend    # Format with Black
 
-# Database migrations
-cd backend
-alembic upgrade head      # Apply migrations
-alembic revision -m "msg" # Create new migration
+# Database migrations (from project root)
+alembic -c backend/open_webui/alembic.ini upgrade head      # Apply migrations
+alembic -c backend/open_webui/alembic.ini revision -m "msg" # Create new migration
 ```
 
 ---

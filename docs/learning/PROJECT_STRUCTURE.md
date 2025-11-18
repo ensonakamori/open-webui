@@ -632,13 +632,14 @@ migrations/
 
 **Create migration:**
 ```bash
-cd backend
-alembic revision -m "Add new table"
+# From project root
+alembic -c backend/open_webui/alembic.ini revision -m "Add new table"
 ```
 
 **Apply migrations:**
 ```bash
-alembic upgrade head
+# From project root
+alembic -c backend/open_webui/alembic.ini upgrade head
 ```
 
 **📍 See:** [DATABASE_ARCHITECTURE.md](./DATABASE_ARCHITECTURE.md#migrations)

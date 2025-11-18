@@ -150,14 +150,16 @@ def downgrade():
 ### Apply Migrations
 
 ```bash
+# From project root
+
 # Upgrade to latest
-alembic upgrade head
+alembic -c backend/open_webui/alembic.ini upgrade head
 
 # Downgrade one version
-alembic downgrade -1
+alembic -c backend/open_webui/alembic.ini downgrade -1
 
 # Show current version
-alembic current
+alembic -c backend/open_webui/alembic.ini current
 ```
 
 ---

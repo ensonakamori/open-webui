@@ -62,12 +62,12 @@
 2. Create migration:
    ```bash
    cd backend
-   alembic revision -m "Add items table"
+   alembic -c backend/open_webui/alembic.ini revision -m "Add items table"
    ```
 
 3. Apply:
    ```bash
-   alembic upgrade head
+   alembic -c backend/open_webui/alembic.ini upgrade head
    ```
 
 ---
